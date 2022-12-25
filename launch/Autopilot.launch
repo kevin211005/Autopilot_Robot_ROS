@@ -1,0 +1,13 @@
+<launch>
+    <arg name="i" default="0"/>
+    <arg name="kp" default="0.5"/>
+	<arg name="ki" default="0.05"/>
+	<arg name="kd" default="0.3"/>
+    <arg name="speed" default="1.0"/>
+    <node pkg="final" name="Auto_pilot" type="Autopilot.py" output="screen">
+        <param name="kp" value="$(arg kp)" />
+        <param name="ki" value="$(arg ki)" />
+        <param name="kd" value="$(arg kd)" />
+        <param name="speed" value="$(arg speed)"/>
+    </node>
+</launch>
